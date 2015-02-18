@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD239C6D1A95180D009BDA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C6C1A95180D009BDA6E /* AppDelegate.swift */; };
+		BD239C6F1A95180D009BDA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C6E1A95180D009BDA6E /* ViewController.swift */; };
+		BD239C721A95180D009BDA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD239C701A95180D009BDA6E /* Main.storyboard */; };
+		BD239C741A95180D009BDA6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD239C731A95180D009BDA6E /* Images.xcassets */; };
+		BD239C771A95180D009BDA6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD239C751A95180D009BDA6E /* LaunchScreen.xib */; };
+		BD239C831A95180E009BDA6E /* HyperRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD239C7D1A95180E009BDA6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD239C5F1A95180D009BDA6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD239C661A95180D009BDA6E;
+			remoteInfo = HyperRecipes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD239C671A95180D009BDA6E /* HyperRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyperRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD239C6B1A95180D009BDA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD239C6C1A95180D009BDA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD239C6E1A95180D009BDA6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD239C711A95180D009BDA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD239C731A95180D009BDA6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD239C761A95180D009BDA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BD239C7C1A95180E009BDA6E /* HyperRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyperRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD239C811A95180E009BDA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperRecipesTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD239C641A95180D009BDA6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD239C791A95180E009BDA6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD239C5E1A95180D009BDA6E = {
+			isa = PBXGroup;
+			children = (
+				BD239C691A95180D009BDA6E /* HyperRecipes */,
+				BD239C7F1A95180E009BDA6E /* HyperRecipesTests */,
+				BD239C681A95180D009BDA6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD239C681A95180D009BDA6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD239C671A95180D009BDA6E /* HyperRecipes.app */,
+				BD239C7C1A95180E009BDA6E /* HyperRecipesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD239C691A95180D009BDA6E /* HyperRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				BD239C6C1A95180D009BDA6E /* AppDelegate.swift */,
+				BD239C6E1A95180D009BDA6E /* ViewController.swift */,
+				BD239C701A95180D009BDA6E /* Main.storyboard */,
+				BD239C731A95180D009BDA6E /* Images.xcassets */,
+				BD239C751A95180D009BDA6E /* LaunchScreen.xib */,
+				BD239C6A1A95180D009BDA6E /* Supporting Files */,
+			);
+			path = HyperRecipes;
+			sourceTree = "<group>";
+		};
+		BD239C6A1A95180D009BDA6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD239C6B1A95180D009BDA6E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD239C7F1A95180E009BDA6E /* HyperRecipesTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */,
+				BD239C801A95180E009BDA6E /* Supporting Files */,
+			);
+			path = HyperRecipesTests;
+			sourceTree = "<group>";
+		};
+		BD239C801A95180E009BDA6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD239C811A95180E009BDA6E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD239C661A95180D009BDA6E /* HyperRecipes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD239C861A95180E009BDA6E /* Build configuration list for PBXNativeTarget "HyperRecipes" */;
+			buildPhases = (
+				BD239C631A95180D009BDA6E /* Sources */,
+				BD239C641A95180D009BDA6E /* Frameworks */,
+				BD239C651A95180D009BDA6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HyperRecipes;
+			productName = HyperRecipes;
+			productReference = BD239C671A95180D009BDA6E /* HyperRecipes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD239C7B1A95180E009BDA6E /* HyperRecipesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD239C891A95180E009BDA6E /* Build configuration list for PBXNativeTarget "HyperRecipesTests" */;
+			buildPhases = (
+				BD239C781A95180E009BDA6E /* Sources */,
+				BD239C791A95180E009BDA6E /* Frameworks */,
+				BD239C7A1A95180E009BDA6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD239C7E1A95180E009BDA6E /* PBXTargetDependency */,
+			);
+			name = HyperRecipesTests;
+			productName = HyperRecipesTests;
+			productReference = BD239C7C1A95180E009BDA6E /* HyperRecipesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD239C5F1A95180D009BDA6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = zenangst;
+				TargetAttributes = {
+					BD239C661A95180D009BDA6E = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					BD239C7B1A95180E009BDA6E = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = BD239C661A95180D009BDA6E;
+					};
+				};
+			};
+			buildConfigurationList = BD239C621A95180D009BDA6E /* Build configuration list for PBXProject "HyperRecipes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD239C5E1A95180D009BDA6E;
+			productRefGroup = BD239C681A95180D009BDA6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD239C661A95180D009BDA6E /* HyperRecipes */,
+				BD239C7B1A95180E009BDA6E /* HyperRecipesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD239C651A95180D009BDA6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD239C721A95180D009BDA6E /* Main.storyboard in Resources */,
+				BD239C771A95180D009BDA6E /* LaunchScreen.xib in Resources */,
+				BD239C741A95180D009BDA6E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD239C7A1A95180E009BDA6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD239C631A95180D009BDA6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD239C6F1A95180D009BDA6E /* ViewController.swift in Sources */,
+				BD239C6D1A95180D009BDA6E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD239C781A95180E009BDA6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD239C831A95180E009BDA6E /* HyperRecipesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD239C7E1A95180E009BDA6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD239C661A95180D009BDA6E /* HyperRecipes */;
+			targetProxy = BD239C7D1A95180E009BDA6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD239C701A95180D009BDA6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD239C711A95180D009BDA6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD239C751A95180D009BDA6E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD239C761A95180D009BDA6E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD239C841A95180E009BDA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD239C851A95180E009BDA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD239C871A95180E009BDA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HyperRecipes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD239C881A95180E009BDA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HyperRecipes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BD239C8A1A95180E009BDA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HyperRecipesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyperRecipes.app/HyperRecipes";
+			};
+			name = Debug;
+		};
+		BD239C8B1A95180E009BDA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HyperRecipesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyperRecipes.app/HyperRecipes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD239C621A95180D009BDA6E /* Build configuration list for PBXProject "HyperRecipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD239C841A95180E009BDA6E /* Debug */,
+				BD239C851A95180E009BDA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD239C861A95180E009BDA6E /* Build configuration list for PBXNativeTarget "HyperRecipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD239C871A95180E009BDA6E /* Debug */,
+				BD239C881A95180E009BDA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD239C891A95180E009BDA6E /* Build configuration list for PBXNativeTarget "HyperRecipesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD239C8A1A95180E009BDA6E /* Debug */,
+				BD239C8B1A95180E009BDA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD239C5F1A95180D009BDA6E /* Project object */;
+}
