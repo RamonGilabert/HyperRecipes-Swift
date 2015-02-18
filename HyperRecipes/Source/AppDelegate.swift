@@ -12,8 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var mainController: RecipesTableViewController? {
+        var mainViewController: RecipesTableViewController = RecipesTableViewController.new()
+        return mainViewController
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+        self.window?.rootViewController = self.mainController
+
         return true
     }
 }
