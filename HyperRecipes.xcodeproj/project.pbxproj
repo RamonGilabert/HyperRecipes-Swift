@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD239C6D1A95180D009BDA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C6C1A95180D009BDA6E /* AppDelegate.swift */; };
-		BD239C6F1A95180D009BDA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C6E1A95180D009BDA6E /* ViewController.swift */; };
 		BD239C721A95180D009BDA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD239C701A95180D009BDA6E /* Main.storyboard */; };
 		BD239C741A95180D009BDA6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD239C731A95180D009BDA6E /* Images.xcassets */; };
 		BD239C771A95180D009BDA6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD239C751A95180D009BDA6E /* LaunchScreen.xib */; };
 		BD239C831A95180E009BDA6E /* HyperRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */; };
+		BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */; };
+		BD239C901A9518E4009BDA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C8E1A9518E4009BDA6E /* ViewController.swift */; };
+		BD239C921A951907009BDA6E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BD239C911A951907009BDA6E /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +29,15 @@
 /* Begin PBXFileReference section */
 		BD239C671A95180D009BDA6E /* HyperRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyperRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD239C6B1A95180D009BDA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD239C6C1A95180D009BDA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD239C6E1A95180D009BDA6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD239C711A95180D009BDA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD239C731A95180D009BDA6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD239C761A95180D009BDA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BD239C7C1A95180E009BDA6E /* HyperRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyperRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD239C811A95180E009BDA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperRecipesTests.swift; sourceTree = "<group>"; };
+		BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD239C8E1A9518E4009BDA6E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD239C911A951907009BDA6E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,8 @@
 		BD239C5E1A95180D009BDA6E = {
 			isa = PBXGroup;
 			children = (
+				BD239C911A951907009BDA6E /* Podfile */,
+				BD239C8C1A9518E4009BDA6E /* Source */,
 				BD239C691A95180D009BDA6E /* HyperRecipes */,
 				BD239C7F1A95180E009BDA6E /* HyperRecipesTests */,
 				BD239C681A95180D009BDA6E /* Products */,
@@ -77,8 +81,6 @@
 		BD239C691A95180D009BDA6E /* HyperRecipes */ = {
 			isa = PBXGroup;
 			children = (
-				BD239C6C1A95180D009BDA6E /* AppDelegate.swift */,
-				BD239C6E1A95180D009BDA6E /* ViewController.swift */,
 				BD239C701A95180D009BDA6E /* Main.storyboard */,
 				BD239C731A95180D009BDA6E /* Images.xcassets */,
 				BD239C751A95180D009BDA6E /* LaunchScreen.xib */,
@@ -110,6 +112,16 @@
 				BD239C811A95180E009BDA6E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD239C8C1A9518E4009BDA6E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */,
+				BD239C8E1A9518E4009BDA6E /* ViewController.swift */,
+			);
+			name = Source;
+			path = HyperRecipes/Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +206,7 @@
 			files = (
 				BD239C721A95180D009BDA6E /* Main.storyboard in Resources */,
 				BD239C771A95180D009BDA6E /* LaunchScreen.xib in Resources */,
+				BD239C921A951907009BDA6E /* Podfile in Resources */,
 				BD239C741A95180D009BDA6E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD239C6F1A95180D009BDA6E /* ViewController.swift in Sources */,
-				BD239C6D1A95180D009BDA6E /* AppDelegate.swift in Sources */,
+				BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */,
+				BD239C901A9518E4009BDA6E /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +422,7 @@
 				BD239C881A95180E009BDA6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD239C891A95180E009BDA6E /* Build configuration list for PBXNativeTarget "HyperRecipesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +431,7 @@
 				BD239C8B1A95180E009BDA6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
