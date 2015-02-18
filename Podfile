@@ -2,7 +2,8 @@
 # platform :ios, '6.0'
 
 target 'HyperRecipes' do
-
+pod 'Alamofire'
+pod 'Realm'
 end
 
 target 'HyperRecipesTests' do
