@@ -2,8 +2,8 @@
 # platform :ios, '6.0'
 
 target 'HyperRecipes' do
-pod 'Alamofire'
-pod 'Realm'
+    pod 'Alamofire', git: "https://github.com/Alamofire/Alamofire", branch: "xcode-6.3"
+    pod 'Realm'
 end
 
 target 'HyperRecipesTests' do
