@@ -14,6 +14,7 @@
 		BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */; };
 		BD239C901A9518E4009BDA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C8E1A9518E4009BDA6E /* ViewController.swift */; };
 		BD239C921A951907009BDA6E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BD239C911A951907009BDA6E /* Podfile */; };
+		C05D6B368C88E257F61F4FB4 /* libPods-HyperRecipes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDBF5EDE0054B84CF16D757 /* libPods-HyperRecipes.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BDBF5EDE0054B84CF16D757 /* libPods-HyperRecipes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HyperRecipes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD239C671A95180D009BDA6E /* HyperRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyperRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD239C6B1A95180D009BDA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD239C711A95180D009BDA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,7 +39,9 @@
 		BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperRecipesTests.swift; sourceTree = "<group>"; };
 		BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD239C8E1A9518E4009BDA6E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD239C911A951907009BDA6E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BD239C911A951907009BDA6E /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D3CA11A478636814AB2F9021 /* Pods-HyperRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperRecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes.release.xcconfig"; sourceTree = "<group>"; };
+		DA62983377691146AFB1D6A4 /* Pods-HyperRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperRecipes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05D6B368C88E257F61F4FB4 /* libPods-HyperRecipes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F3A396434496D807CA77085 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF5EDE0054B84CF16D757 /* libPods-HyperRecipes.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71A6BF4A17271529473BDC7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA62983377691146AFB1D6A4 /* Pods-HyperRecipes.debug.xcconfig */,
+				D3CA11A478636814AB2F9021 /* Pods-HyperRecipes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BD239C5E1A95180D009BDA6E = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +88,8 @@
 				BD239C691A95180D009BDA6E /* HyperRecipes */,
 				BD239C7F1A95180E009BDA6E /* HyperRecipesTests */,
 				BD239C681A95180D009BDA6E /* Products */,
+				71A6BF4A17271529473BDC7A /* Pods */,
+				6F3A396434496D807CA77085 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD239C861A95180E009BDA6E /* Build configuration list for PBXNativeTarget "HyperRecipes" */;
 			buildPhases = (
+				D09D4D42A7B9A52E977D3814 /* Check Pods Manifest.lock */,
 				BD239C631A95180D009BDA6E /* Sources */,
 				BD239C641A95180D009BDA6E /* Frameworks */,
 				BD239C651A95180D009BDA6E /* Resources */,
+				92C2AFB7D75A8373ADA76012 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +245,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92C2AFB7D75A8373ADA76012 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09D4D42A7B9A52E977D3814 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD239C631A95180D009BDA6E /* Sources */ = {
@@ -351,6 +410,7 @@
 		};
 		BD239C871A95180E009BDA6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA62983377691146AFB1D6A4 /* Pods-HyperRecipes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HyperRecipes/Info.plist;
@@ -361,6 +421,7 @@
 		};
 		BD239C881A95180E009BDA6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3CA11A478636814AB2F9021 /* Pods-HyperRecipes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HyperRecipes/Info.plist;
