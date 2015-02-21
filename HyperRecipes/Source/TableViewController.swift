@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Realm
 
-class RecipesTableViewController: UITableViewController {
+class TableViewController: UITableViewController {
 
     let cellIdentifier :String = "MyCell"
 
