@@ -12,6 +12,9 @@ import Realm
 class TableViewController: UITableViewController {
 
     let cellIdentifier :String = "MyCell"
+    var networking :Networking {
+        return Networking.new()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,7 @@ class TableViewController: UITableViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        tableView.reloadData()
+        networking.getRecipes()
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
