@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var mainController: RecipesTableViewController? {
+    var mainController: RecipesTableViewController {
         var mainViewController: RecipesTableViewController = RecipesTableViewController.new()
         return mainViewController
     }
