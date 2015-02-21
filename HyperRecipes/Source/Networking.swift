@@ -11,6 +11,9 @@ import UIKit
 private let _SharedInstance = Networking()
 
 class Networking: NSObject {
+
+    let baseURL = "http://hyper-recipes.herokuapp.com"
+
     class var sharedInstance: Networking {
         return _SharedInstance
     }
