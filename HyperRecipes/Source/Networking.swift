@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 private let _SharedInstance = Networking()
 
@@ -21,4 +22,15 @@ class Networking: NSObject {
     override init() {
         super.init()
     }
+
+    func getRecipes() -> NSDictionary? {
+
+        Alamofire.request(.GET, "\(baseURL)/recipes", parameters: nil)
+            .responseJSON { (_, _, JSON, _) in
+                println(JSON)
+        }
+
+        return nil
+    }
+
 }
