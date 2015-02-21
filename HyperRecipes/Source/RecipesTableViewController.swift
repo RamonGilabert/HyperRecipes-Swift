@@ -17,6 +17,7 @@ class RecipesTableViewController: UITableViewController {
 
         title = "Hyper Recipes"
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRecipeAction")
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -35,6 +36,12 @@ class RecipesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+
+    // MARK: Actions
+
+    func addRecipeAction() {
+
     }
 
 }
