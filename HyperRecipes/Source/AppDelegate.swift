@@ -13,15 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var navigationController: UINavigationController {
+        var aNavigationController = UINavigationController.new()
+        aNavigationController.addChildViewController(mainController)
+
+        return aNavigationController
+    }
+
     var mainController: RecipesTableViewController {
-        var mainViewController: RecipesTableViewController = RecipesTableViewController.new()
-        return mainViewController
+        return RecipesTableViewController.new()
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = self.mainController
+        self.window?.rootViewController = self.navigationController
         self.window?.makeKeyAndVisible()
 
         return true
