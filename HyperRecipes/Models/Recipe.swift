@@ -25,12 +25,13 @@ class Recipe: RLMObject {
         return "id"
     }
 
-    class func processRecipes(recipes :Array<NSDictionary>) {
+    class func processRecipes(recipes :Array<NSDictionary>, completion: () -> ()) {
         RLMRealm.defaultRealm().beginWriteTransaction()
         for recipe in recipes {
             Recipe.pricessRecipe(recipe)
         }
         RLMRealm.defaultRealm().commitWriteTransaction()
+        completion()
     }
 
     class func pricessRecipe(recipe :NSDictionary) {

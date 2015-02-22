@@ -32,8 +32,9 @@ class TableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         networking.getRecipes {
             response in
-                Recipe.processRecipes(response as! Array<NSDictionary>)
+            Recipe.processRecipes(response as! Array<NSDictionary>) {
                 self.tableView.reloadData()
+            }
         }
     }
 
@@ -42,6 +43,7 @@ class TableViewController: UITableViewController {
 
         let currentRecipe = recipesArray().objectAtIndex(UInt(indexPath.row)) as! Recipe
         cell.textLabel?.text = currentRecipe.name
+        cell.detailTextLabel?.text = currentRecipe.instructions
 
         return cell
     }
