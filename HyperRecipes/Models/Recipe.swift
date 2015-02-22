@@ -15,10 +15,13 @@ class Recipe: RLMObject {
     dynamic var descriptionString = ""
     dynamic var difficulty = ""
     dynamic var favorite = false
-    dynamic var remoteID = 0
+    dynamic var id = 0
     dynamic var instructions = ""
     dynamic var name = ""
     dynamic var photoURL = ""
     dynamic var updatedAt = NSDate(timeIntervalSince1970: 1)
 
+    override class func primaryKey() -> String {
+        return "id"
+    }
 }
