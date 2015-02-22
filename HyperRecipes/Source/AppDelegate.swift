@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         NSFileManager.defaultManager().removeItemAtPath(RLMRealm.defaultRealmPath(), error: nil);
 
+        println(RLMRealm.defaultRealmPath())
+
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = self.navigationController
         self.window?.makeKeyAndVisible()
