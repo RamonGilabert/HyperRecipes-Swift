@@ -25,6 +25,13 @@ class Recipe: RLMObject {
         return "id"
     }
 
+    class func recipesWithQuery(query: String) -> RLMResults? {
+        let predicate = NSPredicate(format: query)
+        let recipes = Recipe.objectsWithPredicate(predicate)
+
+        return recipes
+    }
+
     class func processRecipes(recipes :Array<NSDictionary>, completion: () -> ()) {
         RLMRealm.defaultRealm().beginWriteTransaction()
         for recipe in recipes {
