@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD196E841A9A5EB2002A26EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD196E831A9A5EB2002A26EE /* DetailViewController.swift */; };
 		BD239C741A95180D009BDA6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD239C731A95180D009BDA6E /* Images.xcassets */; };
 		BD239C771A95180D009BDA6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD239C751A95180D009BDA6E /* LaunchScreen.xib */; };
 		BD239C831A95180E009BDA6E /* HyperRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		8D80D876814ACDD0C91F4219 /* Pods_HyperRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyperRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD196E831A9A5EB2002A26EE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BD239C671A95180D009BDA6E /* HyperRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyperRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD239C6B1A95180D009BDA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD239C731A95180D009BDA6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */,
 				BD88A9BD1A9540E700353F39 /* TableViewController.swift */,
 				BDFBC0831A95B5C20082CD68 /* Networking.swift */,
+				BD196E831A9A5EB2002A26EE /* DetailViewController.swift */,
 			);
 			name = Source;
 			path = HyperRecipes/Source;
@@ -313,6 +316,7 @@
 			files = (
 				BDFBC0841A95B5C20082CD68 /* Networking.swift in Sources */,
 				BD88A9BE1A9540E700353F39 /* TableViewController.swift in Sources */,
+				BD196E841A9A5EB2002A26EE /* DetailViewController.swift in Sources */,
 				BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */,
 				BD4C3A361A99D32400989BF2 /* Recipe.swift in Sources */,
 			);
