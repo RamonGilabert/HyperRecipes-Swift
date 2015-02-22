@@ -24,4 +24,16 @@ class Recipe: RLMObject {
     override class func primaryKey() -> String {
         return "id"
     }
+
+    class func processRecipes(recipes :Array<NSDictionary>) {
+        let realm = RLMRealm.defaultRealm()
+        realm.beginWriteTransaction()
+        for recipe in recipes {
+            var recipeDictionary: NSMutableDictionary = recipe.mutableCopy() as! NSMutableDictionary
+
+            Recipe.createInRealm(realm, withObject: recipeDictionary)
+        }
+        realm.commitWriteTransaction()
+    }
+
 }
