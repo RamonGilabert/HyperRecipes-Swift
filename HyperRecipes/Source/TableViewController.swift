@@ -9,13 +9,19 @@
 import UIKit
 import Realm
 
+enum RecipeType: Int {
+    case Favorite = 1
+    case Regular = 2
+
+    static var count: Int { return RecipeType.Regular.hashValue + 1 }
+}
+
 class TableViewController: UITableViewController {
 
     let cellIdentifier :String = "MyCell"
 
-    var recipesArray = {
-        return Recipe.allObjects()
-    }
+    var favoriteRecipes = Recipe.recipesWithQuery("favorite = true")
+    var regularRecipes = Recipe.recipesWithQuery("favorite = false")
 
     var networking :Networking {
         return Networking.new()
@@ -38,28 +44,51 @@ class TableViewController: UITableViewController {
         }
     }
 
+    // MARK: UITableViewDataSource
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell :UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
 
-        let currentRecipe = recipesArray().objectAtIndex(UInt(indexPath.row)) as! Recipe
-        cell.textLabel?.text = currentRecipe.name
+        let source: RLMResults?
+        if (indexPath.section == RecipeType.Favorite.hashValue) {
+            source = favoriteRecipes!
+        } else {
+            source = regularRecipes!
+        }
+
+        let currentRecipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
+
+        if (indexPath.section == RecipeType.Favorite.hashValue) {
+            cell.textLabel?.text = "❤️\(currentRecipe.name)"
+        } else {
+            cell.textLabel?.text = currentRecipe.name
+        }
+
         cell.detailTextLabel?.text = currentRecipe.instructions
 
         return cell
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return RecipeType.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(recipesArray().count)
+        switch (section) {
+        case RecipeType.Favorite.hashValue:
+            return Int(favoriteRecipes!.count)
+        case RecipeType.Regular.hashValue:
+            return Int(regularRecipes!.count)
+        default:
+            return 0
+        }
     }
 
     // MARK: Actions
 
     func addRecipeAction() {
-
+        var detailViewController = DetailViewController.new()
+        presentViewController(detailViewController, animated: true) {}
     }
 
 }
