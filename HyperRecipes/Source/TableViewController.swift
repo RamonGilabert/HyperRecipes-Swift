@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
         networking.getRecipes {
             response in
             Recipe.processRecipes(response as! Array<NSDictionary>) {
-                self.tableView.reloadData()
+                self.tableView?.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
             }
         }
     }
