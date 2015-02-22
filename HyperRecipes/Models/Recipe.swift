@@ -34,9 +34,7 @@ class Recipe: RLMObject {
 
     class func processRecipes(recipes :Array<NSDictionary>, completion: () -> ()) {
         RLMRealm.defaultRealm().beginWriteTransaction()
-        for recipe in recipes {
-            Recipe.pricessRecipe(recipe)
-        }
+        for recipe in recipes { Recipe.pricessRecipe(recipe) }
         RLMRealm.defaultRealm().commitWriteTransaction()
         completion()
     }
