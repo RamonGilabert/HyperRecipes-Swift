@@ -26,15 +26,14 @@ class Recipe: RLMObject {
     }
 
     class func processRecipes(recipes :Array<NSDictionary>) {
-        let defaultRealm = RLMRealm.defaultRealm()
-        defaultRealm.beginWriteTransaction()
+        RLMRealm.defaultRealm().beginWriteTransaction()
         for recipe in recipes {
-            Recipe.pricessRecipe(recipe, realm: defaultRealm)
+            Recipe.pricessRecipe(recipe)
         }
-        defaultRealm.commitWriteTransaction()
+        RLMRealm.defaultRealm().commitWriteTransaction()
     }
 
-    class func pricessRecipe(recipe :NSDictionary, realm :RLMRealm) {
+    class func pricessRecipe(recipe :NSDictionary) {
         var recipeDictionary: NSMutableDictionary = recipe.mutableCopy() as! NSMutableDictionary
 
         for (key, value) in recipe {
@@ -42,7 +41,7 @@ class Recipe: RLMObject {
                 recipeDictionary.removeObjectForKey(key);
             }
         }
-        
+
         Recipe.createOrUpdateInDefaultRealmWithObject(recipeDictionary)
     }
 
