@@ -27,7 +27,7 @@ class Networking: NSObject {
         Alamofire.request(.GET, "\(baseURL)/recipes", parameters: nil)
             .responseJSON {
                 (_, _, JSON, _) in
-                 return completion(JSON)
+                 return completion(JSON as! Array<NSDictionary>)
         }
     }
 

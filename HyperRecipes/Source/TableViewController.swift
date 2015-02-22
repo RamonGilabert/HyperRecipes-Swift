@@ -27,6 +27,7 @@ class TableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         networking.getRecipes {
             response in
+                Recipe.processRecipes(response as! Array<NSDictionary>)
         }
     }
 
