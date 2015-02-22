@@ -12,6 +12,7 @@
 		BD239C831A95180E009BDA6E /* HyperRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */; };
 		BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */; };
 		BD239C921A951907009BDA6E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BD239C911A951907009BDA6E /* Podfile */; };
+		BD4C3A361A99D32400989BF2 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3A351A99D32400989BF2 /* Recipe.swift */; };
 		BD88A9BE1A9540E700353F39 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88A9BD1A9540E700353F39 /* TableViewController.swift */; };
 		BDFBC0841A95B5C20082CD68 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBC0831A95B5C20082CD68 /* Networking.swift */; };
 		CE30715E32DC2D23226E14E4 /* Pods_HyperRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D80D876814ACDD0C91F4219 /* Pods_HyperRecipes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -38,6 +39,7 @@
 		BD239C821A95180E009BDA6E /* HyperRecipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperRecipesTests.swift; sourceTree = "<group>"; };
 		BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD239C911A951907009BDA6E /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD4C3A351A99D32400989BF2 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		BD88A9BD1A9540E700353F39 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BDFBC0831A95B5C20082CD68 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		D3CA11A478636814AB2F9021 /* Pods-HyperRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperRecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				BD239C911A951907009BDA6E /* Podfile */,
+				BD4C3A341A99D31300989BF2 /* Models */,
 				BD239C8C1A9518E4009BDA6E /* Source */,
 				BD239C691A95180D009BDA6E /* HyperRecipes */,
 				BD239C7F1A95180E009BDA6E /* HyperRecipesTests */,
@@ -146,6 +149,15 @@
 			);
 			name = Source;
 			path = HyperRecipes/Source;
+			sourceTree = "<group>";
+		};
+		BD4C3A341A99D31300989BF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD4C3A351A99D32400989BF2 /* Recipe.swift */,
+			);
+			name = Models;
+			path = HyperRecipes/Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +314,7 @@
 				BDFBC0841A95B5C20082CD68 /* Networking.swift in Sources */,
 				BD88A9BE1A9540E700353F39 /* TableViewController.swift in Sources */,
 				BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */,
+				BD4C3A361A99D32400989BF2 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
