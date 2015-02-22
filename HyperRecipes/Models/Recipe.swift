@@ -42,14 +42,8 @@ class Recipe: RLMObject {
                 recipeDictionary.removeObjectForKey(key);
             }
         }
-
-        let predicate = NSPredicate(format: "%K = %@", primaryKey(), recipeDictionary[primaryKey()] as! NSNumber)
-        var foundRecipes = Recipe.objectsWithPredicate(predicate)
-        if foundRecipes.count > 0 {
-
-        } else {
-            Recipe.createInRealm(realm, withObject: recipeDictionary)
-        }
+        
+        Recipe.createOrUpdateInDefaultRealmWithObject(recipeDictionary)
     }
 
 }
