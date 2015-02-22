@@ -23,14 +23,12 @@ class Networking: NSObject {
         super.init()
     }
 
-    func getRecipes() -> NSDictionary? {
-
+    func getRecipes(completion: (AnyObject?) -> ()) {
         Alamofire.request(.GET, "\(baseURL)/recipes", parameters: nil)
-            .responseJSON { (_, _, JSON, _) in
-                println(JSON)
+            .responseJSON {
+                (_, _, JSON, _) in
+                 return completion(JSON)
         }
-
-        return nil
     }
 
 }

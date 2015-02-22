@@ -25,7 +25,9 @@ class TableViewController: UITableViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        networking.getRecipes()
+        networking.getRecipes {
+            response in
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
