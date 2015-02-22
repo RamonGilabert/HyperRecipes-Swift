@@ -31,6 +31,12 @@ class Recipe: RLMObject {
         for recipe in recipes {
             var recipeDictionary: NSMutableDictionary = recipe.mutableCopy() as! NSMutableDictionary
 
+            for (key, value) in recipe {
+                if (value.isKindOfClass(NSNull.classForCoder())) {
+                    recipeDictionary.removeObjectForKey(key);
+                }
+            }
+
             Recipe.createInRealm(realm, withObject: recipeDictionary)
         }
         realm.commitWriteTransaction()
