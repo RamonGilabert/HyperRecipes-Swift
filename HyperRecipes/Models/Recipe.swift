@@ -26,20 +26,30 @@ class Recipe: RLMObject {
     }
 
     class func processRecipes(recipes :Array<NSDictionary>) {
-        let realm = RLMRealm.defaultRealm()
-        realm.beginWriteTransaction()
+        let defaultRealm = RLMRealm.defaultRealm()
+        defaultRealm.beginWriteTransaction()
         for recipe in recipes {
-            var recipeDictionary: NSMutableDictionary = recipe.mutableCopy() as! NSMutableDictionary
+            Recipe.pricessRecipe(recipe, realm: defaultRealm)
+        }
+        defaultRealm.commitWriteTransaction()
+    }
 
-            for (key, value) in recipe {
-                if (value.isKindOfClass(NSNull.classForCoder())) {
-                    recipeDictionary.removeObjectForKey(key);
-                }
+    class func pricessRecipe(recipe :NSDictionary, realm :RLMRealm) {
+        var recipeDictionary: NSMutableDictionary = recipe.mutableCopy() as! NSMutableDictionary
+
+        for (key, value) in recipe {
+            if (value.isKindOfClass(NSNull.classForCoder())) {
+                recipeDictionary.removeObjectForKey(key);
             }
+        }
 
+        let predicate = NSPredicate(format: "%K = %@", primaryKey(), recipeDictionary[primaryKey()] as! NSNumber)
+        var foundRecipes = Recipe.objectsWithPredicate(predicate)
+        if foundRecipes.count > 0 {
+
+        } else {
             Recipe.createInRealm(realm, withObject: recipeDictionary)
         }
-        realm.commitWriteTransaction()
     }
 
 }
