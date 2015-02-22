@@ -12,6 +12,11 @@ import Realm
 class TableViewController: UITableViewController {
 
     let cellIdentifier :String = "MyCell"
+
+    var recipesArray = {
+        return Recipe.allObjects()
+    }
+
     var networking :Networking {
         return Networking.new()
     }
@@ -28,11 +33,15 @@ class TableViewController: UITableViewController {
         networking.getRecipes {
             response in
                 Recipe.processRecipes(response as! Array<NSDictionary>)
+                self.tableView.reloadData()
         }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell :UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+
+        let currentRecipe = recipesArray().objectAtIndex(UInt(indexPath.row)) as! Recipe
+        cell.textLabel?.text = currentRecipe.name
 
         return cell
     }
@@ -42,7 +51,7 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return Int(recipesArray().count)
     }
 
     // MARK: Actions
