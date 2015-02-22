@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        NSFileManager.defaultManager().removeItemAtPath(RLMRealm.defaultRealmPath(), error: nil);
+//        NSFileManager.defaultManager().removeItemAtPath(RLMRealm.defaultRealmPath(), error: nil);
 
         println(RLMRealm.defaultRealmPath())
 
