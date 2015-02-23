@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
 
     override func viewDidAppear(animated: Bool) {
         Recipe.processRecipes {
-            self.tableView?.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
+            self.tableView.reloadData()
         }
     }
 
