@@ -37,9 +37,7 @@ class Recipe: RLMObject {
                     for recipe in JSON as! Array<NSDictionary> {
                         Recipe.processRecipe(recipe)
                     }
-                }, completion: {
-                    completion()
-                })
+                }, completion: { completion() })
         }
     }
 
