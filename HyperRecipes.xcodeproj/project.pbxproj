@@ -14,7 +14,8 @@
 		BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */; };
 		BD239C921A951907009BDA6E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BD239C911A951907009BDA6E /* Podfile */; };
 		BD4C3A361A99D32400989BF2 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3A351A99D32400989BF2 /* Recipe.swift */; };
-		BD65D1071A9B9F9600BD7C7F /* RLMObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65D1061A9B9F9600BD7C7F /* RLMObjectExtensions.swift */; };
+		BD65D10D1A9BA65000BD7C7F /* NSDictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65D10B1A9BA65000BD7C7F /* NSDictionaryExtensions.swift */; };
+		BD65D10E1A9BA65000BD7C7F /* RLMObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65D10C1A9BA65000BD7C7F /* RLMObjectExtensions.swift */; };
 		BD88A9BE1A9540E700353F39 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88A9BD1A9540E700353F39 /* TableViewController.swift */; };
 		CE30715E32DC2D23226E14E4 /* Pods_HyperRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D80D876814ACDD0C91F4219 /* Pods_HyperRecipes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -42,7 +43,8 @@
 		BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD239C911A951907009BDA6E /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD4C3A351A99D32400989BF2 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		BD65D1061A9B9F9600BD7C7F /* RLMObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMObjectExtensions.swift; sourceTree = "<group>"; };
+		BD65D10B1A9BA65000BD7C7F /* NSDictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDictionaryExtensions.swift; sourceTree = "<group>"; };
+		BD65D10C1A9BA65000BD7C7F /* RLMObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMObjectExtensions.swift; sourceTree = "<group>"; };
 		BD88A9BD1A9540E700353F39 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D3CA11A478636814AB2F9021 /* Pods-HyperRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperRecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes.release.xcconfig"; sourceTree = "<group>"; };
 		DA62983377691146AFB1D6A4 /* Pods-HyperRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperRecipes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				BD239C911A951907009BDA6E /* Podfile */,
+				BD65D10A1A9BA63800BD7C7F /* Extensions */,
 				BD4C3A341A99D31300989BF2 /* Models */,
 				BD239C8C1A9518E4009BDA6E /* Source */,
 				BD239C691A95180D009BDA6E /* HyperRecipes */,
@@ -148,7 +151,6 @@
 				BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */,
 				BD88A9BD1A9540E700353F39 /* TableViewController.swift */,
 				BD196E831A9A5EB2002A26EE /* DetailViewController.swift */,
-				BD65D1061A9B9F9600BD7C7F /* RLMObjectExtensions.swift */,
 			);
 			name = Source;
 			path = HyperRecipes/Source;
@@ -161,6 +163,16 @@
 			);
 			name = Models;
 			path = HyperRecipes/Models;
+			sourceTree = "<group>";
+		};
+		BD65D10A1A9BA63800BD7C7F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD65D10B1A9BA65000BD7C7F /* NSDictionaryExtensions.swift */,
+				BD65D10C1A9BA65000BD7C7F /* RLMObjectExtensions.swift */,
+			);
+			name = Extensions;
+			path = HyperRecipes/Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +328,10 @@
 			files = (
 				BD88A9BE1A9540E700353F39 /* TableViewController.swift in Sources */,
 				BD196E841A9A5EB2002A26EE /* DetailViewController.swift in Sources */,
+				BD65D10D1A9BA65000BD7C7F /* NSDictionaryExtensions.swift in Sources */,
 				BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */,
 				BD4C3A361A99D32400989BF2 /* Recipe.swift in Sources */,
-				BD65D1071A9B9F9600BD7C7F /* RLMObjectExtensions.swift in Sources */,
+				BD65D10E1A9BA65000BD7C7F /* RLMObjectExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
