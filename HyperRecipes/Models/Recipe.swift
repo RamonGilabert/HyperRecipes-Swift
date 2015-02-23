@@ -33,13 +33,13 @@ class Recipe: RLMObject {
     class func processRecipes(completion: () -> ()) {
         Alamofire.request(.GET, EndPoints.Fetch.rawValue, parameters: nil)
             .responseJSON { (_, _, JSON, _) in
-                RLMRealm.defaultRealm().beginWriteTransaction()
-                for recipe in JSON as! Array<NSDictionary> {
-                    Recipe.processRecipe(recipe)
-                }
-                RLMRealm.defaultRealm().commitWriteTransaction()
-
-                completion()
+                Recipe.defaultRealmTransaction({
+                    for recipe in JSON as! Array<NSDictionary> {
+                        Recipe.processRecipe(recipe)
+                    }
+                }, completion: {
+                    completion()
+                })
         }
     }
 
