@@ -30,13 +30,6 @@ class Recipe: RLMObject {
         return "id"
     }
 
-    class func recipesWithQuery(query: String) -> RLMResults? {
-        let predicate = NSPredicate(format: query)
-        let recipes = Recipe.objectsWithPredicate(predicate)
-
-        return recipes
-    }
-
     class func processRecipes(completion: () -> ()) {
         Alamofire.request(.GET, EndPoints.Fetch.rawValue, parameters: nil)
             .responseJSON { (_, _, JSON, _) in

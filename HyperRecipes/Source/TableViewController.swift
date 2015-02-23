@@ -20,8 +20,8 @@ class TableViewController: UITableViewController {
 
     let cellIdentifier :String = "MyCell"
 
-    var favoriteRecipes = Recipe.recipesWithQuery("favorite = true")
-    var regularRecipes = Recipe.recipesWithQuery("favorite = false")
+    var favoriteRecipes = Recipe.objectWithQueryString("favorite = true")
+    var regularRecipes = Recipe.objectWithQueryString("favorite = false")
 
     override func viewDidLoad() {
         super.viewDidLoad()
