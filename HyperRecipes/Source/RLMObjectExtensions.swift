@@ -17,4 +17,11 @@ extension RLMObject {
         return recipes
     }
 
+    class func defaultRealmTransaction( transaction: () -> (), completion: () -> () ) {
+        RLMRealm.defaultRealm().beginWriteTransaction()
+        transaction()
+        RLMRealm.defaultRealm().commitWriteTransaction()
+        completion()
+    }
+
 }
