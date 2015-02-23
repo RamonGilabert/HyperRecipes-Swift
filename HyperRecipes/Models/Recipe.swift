@@ -42,15 +42,7 @@ class Recipe: RLMObject {
     }
 
     class func processRecipe(recipe :NSDictionary) {
-        var recipeDictionary: NSMutableDictionary = recipe.mutableCopy() as! NSMutableDictionary
-
-        for (key, value) in recipe {
-            if (value.isKindOfClass(NSNull.classForCoder())) {
-                recipeDictionary.removeObjectForKey(key);
-            }
-        }
-
-        Recipe.createOrUpdateInDefaultRealmWithObject(recipeDictionary)
+        Recipe.createOrUpdateInDefaultRealmWithObject(recipe.removeNullValues())
     }
 
 }
