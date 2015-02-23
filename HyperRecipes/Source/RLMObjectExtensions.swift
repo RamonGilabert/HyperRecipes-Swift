@@ -12,9 +12,9 @@ extension RLMObject {
 
     class func objectWithQueryString(query: String) -> RLMResults? {
         let predicate = NSPredicate(format: query)
-        let recipes = Recipe.objectsWithPredicate(predicate)
+        let objects = Recipe.objectsWithPredicate(predicate)
 
-        return recipes
+        return objects
     }
 
     class func defaultRealmTransaction( transaction: () -> (), completion: () -> () ) {
