@@ -21,6 +21,8 @@ class Recipe: RLMObject {
     dynamic var photoURL = ""
     dynamic var updatedAt = NSDate(timeIntervalSince1970: 1)
 
+    let fetchURL = "/recipes"
+
     override class func primaryKey() -> String {
         return "id"
     }
@@ -34,12 +36,12 @@ class Recipe: RLMObject {
 
     class func processRecipes(recipes :Array<NSDictionary>, completion: () -> ()) {
         RLMRealm.defaultRealm().beginWriteTransaction()
-        for recipe in recipes { Recipe.pricessRecipe(recipe) }
+        for recipe in recipes { Recipe.processRecipe(recipe) }
         RLMRealm.defaultRealm().commitWriteTransaction()
         completion()
     }
 
-    class func pricessRecipe(recipe :NSDictionary) {
+    class func processRecipe(recipe :NSDictionary) {
         var recipeDictionary: NSMutableDictionary = recipe.mutableCopy() as! NSMutableDictionary
 
         for (key, value) in recipe {
