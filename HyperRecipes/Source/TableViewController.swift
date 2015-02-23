@@ -32,7 +32,7 @@ class TableViewController: UITableViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        Recipe.processRecipes {
+        Recipe.fetchRecipes {
             self.tableView.reloadData()
         }
     }

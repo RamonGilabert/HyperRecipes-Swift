@@ -30,7 +30,7 @@ class Recipe: RLMObject {
         return "id"
     }
 
-    class func processRecipes(completion: () -> ()) {
+    class func fetchRecipes(completion: () -> ()) {
         Alamofire.request(.GET, EndPoints.Fetch.rawValue, parameters: nil)
             .responseJSON { (_, _, JSON, _) in
                 Recipe.defaultRealmTransaction({
