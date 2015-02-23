@@ -10,5 +10,16 @@ import Foundation
 
 extension NSDictionary {
 
+    func removeNullValues() -> NSDictionary {
+        var mutableDictionary: NSMutableDictionary = self.mutableCopy() as! NSMutableDictionary
+
+        for (key, value) in mutableDictionary {
+            if (value.isKindOfClass(NSNull.classForCoder())) {
+                mutableDictionary.removeObjectForKey(key);
+            }
+        }
+
+        return mutableDictionary.copy() as! NSDictionary
+    }
 
 }
