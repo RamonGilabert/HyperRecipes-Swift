@@ -23,10 +23,6 @@ class TableViewController: UITableViewController {
     var favoriteRecipes = Recipe.recipesWithQuery("favorite = true")
     var regularRecipes = Recipe.recipesWithQuery("favorite = false")
 
-    var networking :Networking {
-        return Networking.new()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,11 +32,8 @@ class TableViewController: UITableViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        networking.getRecipes {
-            response in
-            Recipe.processRecipes(response as! Array<NSDictionary>) {
-                self.tableView?.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
-            }
+        Recipe.processRecipes {
+            self.tableView?.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
         }
     }
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import Realm
+import Alamofire
 
 class Recipe: RLMObject {
 
@@ -21,7 +22,9 @@ class Recipe: RLMObject {
     dynamic var photoURL = ""
     dynamic var updatedAt = NSDate(timeIntervalSince1970: 1)
 
-    let fetchURL = "/recipes"
+    enum EndPoints: String {
+        case Fetch = "http://hyper-recipes.herokuapp.com/recipes"
+    }
 
     override class func primaryKey() -> String {
         return "id"
@@ -34,11 +37,17 @@ class Recipe: RLMObject {
         return recipes
     }
 
-    class func processRecipes(recipes :Array<NSDictionary>, completion: () -> ()) {
-        RLMRealm.defaultRealm().beginWriteTransaction()
-        for recipe in recipes { Recipe.processRecipe(recipe) }
-        RLMRealm.defaultRealm().commitWriteTransaction()
-        completion()
+    class func processRecipes(completion: () -> ()) {
+        Alamofire.request(.GET, EndPoints.Fetch.rawValue, parameters: nil)
+            .responseJSON { (_, _, JSON, _) in
+                RLMRealm.defaultRealm().beginWriteTransaction()
+                for recipe in JSON as! Array<NSDictionary> {
+                    Recipe.processRecipe(recipe)
+                }
+                RLMRealm.defaultRealm().commitWriteTransaction()
+
+                completion()
+        }
     }
 
     class func processRecipe(recipe :NSDictionary) {
