@@ -35,14 +35,10 @@ class Recipe: RLMObject {
             .responseJSON { (_, _, JSON, _) in
                 Recipe.defaultRealmTransaction({
                     for recipe in JSON as! Array<NSDictionary> {
-                        Recipe.processRecipe(recipe)
+                        Recipe.createOrUpdateInDefaultRealmWithObject(recipe.removeNullValues())
                     }
                 }, completion: { completion() })
         }
-    }
-
-    class func processRecipe(recipe :NSDictionary) {
-        Recipe.createOrUpdateInDefaultRealmWithObject(recipe.removeNullValues())
     }
 
 }
