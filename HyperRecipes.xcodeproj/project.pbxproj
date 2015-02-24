@@ -17,6 +17,7 @@
 		BD65D10D1A9BA65000BD7C7F /* NSDictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65D10B1A9BA65000BD7C7F /* NSDictionaryExtensions.swift */; };
 		BD65D10E1A9BA65000BD7C7F /* RLMObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65D10C1A9BA65000BD7C7F /* RLMObjectExtensions.swift */; };
 		BD88A9BE1A9540E700353F39 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88A9BD1A9540E700353F39 /* TableViewController.swift */; };
+		BDC08B531A9D1B170057DADF /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC08B521A9D1B170057DADF /* RecipeCell.swift */; };
 		CE30715E32DC2D23226E14E4 /* Pods_HyperRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D80D876814ACDD0C91F4219 /* Pods_HyperRecipes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		BD65D10B1A9BA65000BD7C7F /* NSDictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDictionaryExtensions.swift; sourceTree = "<group>"; };
 		BD65D10C1A9BA65000BD7C7F /* RLMObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMObjectExtensions.swift; sourceTree = "<group>"; };
 		BD88A9BD1A9540E700353F39 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BDC08B521A9D1B170057DADF /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		D3CA11A478636814AB2F9021 /* Pods-HyperRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperRecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes.release.xcconfig"; sourceTree = "<group>"; };
 		DA62983377691146AFB1D6A4 /* Pods-HyperRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperRecipes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyperRecipes/Pods-HyperRecipes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 				BD239C8D1A9518E4009BDA6E /* AppDelegate.swift */,
 				BD88A9BD1A9540E700353F39 /* TableViewController.swift */,
 				BD196E831A9A5EB2002A26EE /* DetailViewController.swift */,
+				BDC08B521A9D1B170057DADF /* RecipeCell.swift */,
 			);
 			name = Source;
 			path = HyperRecipes/Source;
@@ -329,6 +332,7 @@
 				BD88A9BE1A9540E700353F39 /* TableViewController.swift in Sources */,
 				BD196E841A9A5EB2002A26EE /* DetailViewController.swift in Sources */,
 				BD65D10D1A9BA65000BD7C7F /* NSDictionaryExtensions.swift in Sources */,
+				BDC08B531A9D1B170057DADF /* RecipeCell.swift in Sources */,
 				BD239C8F1A9518E4009BDA6E /* AppDelegate.swift in Sources */,
 				BD4C3A361A99D32400989BF2 /* Recipe.swift in Sources */,
 				BD65D10E1A9BA65000BD7C7F /* RLMObjectExtensions.swift in Sources */,

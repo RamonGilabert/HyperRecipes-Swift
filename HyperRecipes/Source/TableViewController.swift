@@ -10,8 +10,8 @@ import UIKit
 import Realm
 
 enum RecipeType: Int {
-    case Favorite = 1
-    case Regular = 2
+    case Favorite = 0
+    case Regular = 1
 
     static var count: Int { return RecipeType.Regular.hashValue + 1 }
 }
@@ -27,7 +27,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
 
         title = "Hyper Recipes"
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.registerClass(RecipeCell.self, forCellReuseIdentifier: RecipeCell.identifier())
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRecipeAction")
     }
 
@@ -40,24 +40,13 @@ class TableViewController: UITableViewController {
     // MARK: UITableViewDataSource
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell :UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        var cell :RecipeCell = tableView.dequeueReusableCellWithIdentifier(RecipeCell.identifier(), forIndexPath: indexPath) as! RecipeCell
 
-        let source: RLMResults?
-        if (indexPath.section == RecipeType.Favorite.hashValue) {
-            source = favoriteRecipes!
-        } else {
-            source = regularRecipes!
-        }
+        let source: RLMResults? = (indexPath.section == RecipeType.Favorite.hashValue) ?
+            favoriteRecipes : regularRecipes
+        let recipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
 
-        let currentRecipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
-
-        if (indexPath.section == RecipeType.Favorite.hashValue) {
-            cell.textLabel?.text = "❤️\(currentRecipe.name)"
-        } else {
-            cell.textLabel?.text = currentRecipe.name
-        }
-
-        cell.detailTextLabel?.text = currentRecipe.instructions
+        cell.configureCell(recipe, type: RecipeType(rawValue: indexPath.section)!)
 
         return cell
     }
