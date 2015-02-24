@@ -5,18 +5,18 @@ PODS:
   - Realm/Headers (0.90.6)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire`, branch `xcode-6.3`)
+  - Alamofire (from `https://github.com/rastersize/Alamofire`, branch `xcode63/fix-6.3b2-issue`)
   - Realm
 
 EXTERNAL SOURCES:
   Alamofire:
-    :branch: xcode-6.3
-    :git: https://github.com/Alamofire/Alamofire
+    :branch: xcode63/fix-6.3b2-issue
+    :git: https://github.com/rastersize/Alamofire
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: cde1cc93824a689f5d429f035bc663548fcca135
-    :git: https://github.com/Alamofire/Alamofire
+    :commit: dc83fd40074683d96b7eb0238a3f3cfb46e2fd34
+    :git: https://github.com/rastersize/Alamofire
 
 SPEC CHECKSUMS:
   Alamofire: 7c87bf4a655df535791f4195bd803bf4f6c9c835
