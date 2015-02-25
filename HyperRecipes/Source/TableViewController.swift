@@ -18,9 +18,18 @@ enum RecipeType: Int {
 
 class TableViewController: UITableViewController {
 
-    static var allRecipes = Recipe.allObjects().sortedResultsUsingProperty("name", ascending: true)
-    var favoriteRecipes = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = %@", true))
-    var regularRecipes  = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = %@", false))
+    var dataSource: TableViewDataSource!
+
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+
+        self.dataSource = TableViewDataSource.new()
+        self.tableView.dataSource = self.dataSource
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,35 +42,6 @@ class TableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         Recipe.fetchRecipes {
             self.tableView.reloadData()
-        }
-    }
-
-    // MARK: UITableViewDataSource
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell :RecipeCell = tableView.dequeueReusableCellWithIdentifier(RecipeCell.identifier(), forIndexPath: indexPath) as! RecipeCell
-
-        let source = indexPath.section == RecipeType.Favorite.hashValue ?
-            favoriteRecipes : regularRecipes
-        let recipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
-
-        cell.configureCell(recipe, indexPath: indexPath)
-
-        return cell
-    }
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return RecipeType.count
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case RecipeType.Favorite.hashValue:
-            return Int(favoriteRecipes!.count)
-        case RecipeType.Regular.hashValue:
-            return Int(regularRecipes!.count)
-        default:
-            return 0
         }
     }
 
