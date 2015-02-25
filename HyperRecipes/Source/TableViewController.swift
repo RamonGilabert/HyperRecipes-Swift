@@ -43,7 +43,7 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell :RecipeCell = tableView.dequeueReusableCellWithIdentifier(RecipeCell.identifier(), forIndexPath: indexPath) as! RecipeCell
 
-        let source: RLMResults? = (indexPath.section == RecipeType.Favorite.hashValue) ?
+        let source = indexPath.section == RecipeType.Favorite.hashValue ?
             favoriteRecipes : regularRecipes
         let recipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
 
@@ -57,7 +57,7 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch (section) {
+        switch section {
         case RecipeType.Favorite.hashValue:
             return Int(favoriteRecipes!.count)
         case RecipeType.Regular.hashValue:
