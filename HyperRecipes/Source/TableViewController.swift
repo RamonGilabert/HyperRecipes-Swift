@@ -20,10 +20,9 @@ class TableViewController: UITableViewController {
 
     let cellIdentifier :String = "MyCell"
 
-    var favoriteRecipes = Recipe.objectWithQueryString("favorite = true")!
-        .sortedResultsUsingProperty("name", ascending: true)
-    var regularRecipes = Recipe.objectWithQueryString("favorite = false")!
-        .sortedResultsUsingProperty("name", ascending: true)
+    static var allRecipes = Recipe.allObjects().sortedResultsUsingProperty("name", ascending: true)
+    var favoriteRecipes = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = true"))
+    var regularRecipes  = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = false"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
