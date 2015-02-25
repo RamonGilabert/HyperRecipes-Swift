@@ -21,8 +21,8 @@ class TableViewController: UITableViewController {
     let cellIdentifier :String = "MyCell"
 
     static var allRecipes = Recipe.allObjects().sortedResultsUsingProperty("name", ascending: true)
-    var favoriteRecipes = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = true"))
-    var regularRecipes  = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = false"))
+    var favoriteRecipes = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = %@", true))
+    var regularRecipes  = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = %@", false))
 
     override func viewDidLoad() {
         super.viewDidLoad()
