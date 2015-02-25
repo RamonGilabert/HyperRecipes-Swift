@@ -16,9 +16,7 @@ class RecipeCell: UITableViewCell {
 
     func configureCell(recipe :Recipe, indexPath: NSIndexPath) {
 
-        let type = RecipeType(rawValue: indexPath.section)!
-
-        switch type {
+        switch RecipeType(rawValue: indexPath.section)! {
         case RecipeType.Favorite:
             self.textLabel?.text = "❤️\(recipe.name)"
         default:
