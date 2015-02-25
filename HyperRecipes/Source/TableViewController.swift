@@ -46,7 +46,7 @@ class TableViewController: UITableViewController {
             favoriteRecipes : regularRecipes
         let recipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
 
-        cell.configureCell(recipe, type: RecipeType(rawValue: indexPath.section)!)
+        cell.configureCell(recipe, indexPath: indexPath)
 
         return cell
     }
