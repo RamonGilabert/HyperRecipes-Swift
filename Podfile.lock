@@ -19,7 +19,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/rastersize/Alamofire
 
 SPEC CHECKSUMS:
-  Alamofire: 7c87bf4a655df535791f4195bd803bf4f6c9c835
+  Alamofire: 6a2cbaebe78a6d469bc55ee37f0a24ba22af76ac
   Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
 
-COCOAPODS: 0.36.0.beta.2
+COCOAPODS: 0.36.0.rc.1
