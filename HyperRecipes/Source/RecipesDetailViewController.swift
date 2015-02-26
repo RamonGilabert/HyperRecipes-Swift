@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  RecipesDetailViewController.swift
 //  HyperRecipes
 //
 //  Created by Christoffer Winterkvist on 22/02/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class RecipesDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

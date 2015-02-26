@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return aNavigationController
     }
 
-    var mainController: TableViewController {
-        return TableViewController.new()
+    var mainController: RecipesTableViewController {
+        return RecipesTableViewController.new()
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

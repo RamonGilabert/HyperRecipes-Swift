@@ -16,14 +16,14 @@ enum RecipeType: Int {
     static var count: Int { return RecipeType.Regular.hashValue + 1 }
 }
 
-class TableViewController: UITableViewController {
+class RecipesTableViewController: UITableViewController {
 
-    var dataSource: TableViewDataSource!
+    var dataSource: RecipesTableViewDataSource!
 
     override init(style: UITableViewStyle) {
         super.init(style: style)
 
-        self.dataSource = TableViewDataSource.new()
+        self.dataSource = RecipesTableViewDataSource.new()
         self.tableView.dataSource = self.dataSource
     }
 
@@ -34,7 +34,6 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Hyper Recipes"
         tableView.registerClass(RecipeCell.self, forCellReuseIdentifier: RecipeCell.identifier())
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRecipeAction")
     }
@@ -48,7 +47,7 @@ class TableViewController: UITableViewController {
     // MARK: Actions
 
     func addRecipeAction() {
-        var detailViewController = DetailViewController.new()
+        var detailViewController = RecipesDetailViewController.new()
         presentViewController(detailViewController, animated: true) {}
     }
 

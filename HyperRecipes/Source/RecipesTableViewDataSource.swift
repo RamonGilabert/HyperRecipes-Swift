@@ -1,5 +1,5 @@
 //
-//  TableViewDataSource.swift
+//  RecipesTableViewDataSource.swift
 //  HyperRecipes
 //
 //  Created by Christoffer Winterkvist on 2/25/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewDataSource: NSObject, UITableViewDataSource {
+class RecipesTableViewDataSource: NSObject, UITableViewDataSource {
 
     static var allRecipes = Recipe.allObjects().sortedResultsUsingProperty("name", ascending: true)
     var favoriteRecipes = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = %@", true))
