@@ -35,11 +35,4 @@ class RecipesTableViewController: UITableViewController {
         }
     }
 
-    // MARK: Actions
-
-    func addRecipeAction() {
-        var detailViewController = RecipesDetailViewController.new()
-        presentViewController(detailViewController, animated: true) {}
-    }
-
 }
