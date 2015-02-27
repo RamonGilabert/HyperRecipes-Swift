@@ -25,8 +25,6 @@ class RecipesTableViewController: UITableViewController {
 
         self.dataSource = RecipesTableViewDataSource.new()
         self.tableView.dataSource = self.dataSource
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRecipeAction")
     }
 
     override func viewDidAppear(animated: Bool) {
