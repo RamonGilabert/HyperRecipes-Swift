@@ -20,21 +20,12 @@ class RecipesTableViewController: UITableViewController {
 
     var dataSource: RecipesTableViewDataSource!
 
-    override init(style: UITableViewStyle) {
-        super.init(style: style)
-
-        self.dataSource = RecipesTableViewDataSource.new()
-        self.tableView.dataSource = self.dataSource
-    }
-
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.registerClass(RecipeCell.self, forCellReuseIdentifier: RecipeCell.identifier())
+        self.dataSource = RecipesTableViewDataSource.new()
+        self.tableView.dataSource = self.dataSource
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRecipeAction")
     }
 

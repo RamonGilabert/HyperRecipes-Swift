@@ -15,15 +15,24 @@ class RecipesTableViewDataSource: NSObject, UITableViewDataSource {
     var regularRecipes  = allRecipes.objectsWithPredicate(NSPredicate(format: "favorite = %@", false))
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell :RecipeCell = tableView.dequeueReusableCellWithIdentifier(RecipeCell.identifier(), forIndexPath: indexPath) as! RecipeCell
-
-        let source = indexPath.section == RecipeType.Favorite.hashValue ?
-            favoriteRecipes : regularRecipes
-        let recipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
-
-        cell.configureCell(recipe, indexPath: indexPath)
-
-        return cell
+        var cell :AnyObject;
+        if indexPath.section == RecipeType.Favorite.hashValue {
+            let source = favoriteRecipes
+            let recipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
+            let favoriteCell = tableView.dequeueReusableCellWithIdentifier("RecipeTableViewFavoriteCell", forIndexPath: indexPath) as! RecipeTableViewCellFavorite
+            favoriteCell.nameLabel?.text = recipe.name
+            
+            cell = favoriteCell
+        } else {
+            let source = regularRecipes
+            let recipe = source?.objectAtIndex(UInt(indexPath.row)) as! Recipe
+            let regularCell = tableView.dequeueReusableCellWithIdentifier("RecipeTableViewRegularCell", forIndexPath: indexPath) as! RecipeTableViewCellRegular
+            regularCell.nameLabel?.text = recipe.name
+            
+            cell = regularCell
+        }
+        
+        return cell as! UITableViewCell
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
